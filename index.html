@@ -175,4 +175,134 @@
 <section id="about">
   <h2>About Me</h2>
   <div class="inner">
-    <p>I am a Computer Engineering student at the Georgia Institute of Technology, expected to graduate in May 2028. Before transferring to Georgia Tech, I completed my first two years of the Bachelor of Science in Computer Engineering at Kennesaw State University, where I earned a 3.9 GPA
+    <p>I am a Computer Engineering student at the Georgia Institute of Technology, expected to graduate in May 2028. Before transferring to Georgia Tech, I completed my first two years of the Bachelor of Science in Computer Engineering at Kennesaw State University, where I earned a 3.9 GPA and made the President's List and the Dean's List. My interest in engineering started with games. I wanted to know how the things I played actually worked, so I began writing code and kept going from there.</p>
+    <p>That curiosity has grown into a broader interest in how software connects to the physical world. I have built a Raspberry Pi system from the operating system up, written scripts for hardware control, and worked with Linux, SSH, and networking configuration. I have also finished four games, which taught me how to plan a project, test it with real players, and fix problems quickly when they come up.</p>
+    <p>Outside of class and projects, I work as a lifeguard, where I am responsible for the safety of swimmers across eight pool locations. I also work as a host and dishwasher at The Marlay House. Both jobs taught me to stay calm under pressure, communicate clearly with coworkers and customers, and keep my focus on the details that matter most. I am also active in the Game Development Club and play intramural basketball.</p>
+  </div>
+</section>
+
+<section id="goals">
+  <h2>Career Goals</h2>
+  <p><strong>Short-term (Summer 2027):</strong> I am seeking a summer internship in user-interactive experiences or electronic communication systems. I want a role where I can apply what I have learned in game development and embedded systems to products that real people use.</p>
+  <p><strong>Mid-term (before graduation in 2028):</strong> Build on my coursework with projects that combine software and hardware, and gain experience working on a team with a larger codebase than I have worked with alone. I also plan to strengthen my knowledge of networking and signal processing, which connects to my wave generation and captioning projects.</p>
+  <p><strong>Long-term:</strong> Work as an engineer on interactive products, whether that means game systems, user interfaces, or communication hardware. I eventually want to lead small technical teams and take responsibility for both the design and the implementation of a product.</p>
+  <h3>How I plan to get there</h3>
+  <ul class="clean">
+    <li>Complete relevant Georgia Tech coursework in software design, embedded systems, and signal processing.</li>
+    <li>Continue the Game Development Club and use it to ship at least one more finished project before my internship search.</li>
+    <li>Apply for internships in the Fall 2026 and Spring 2027 cycles, and use the ECE Career Fair to talk with recruiters about interactive and communication systems roles.</li>
+    <li>Keep this ePortfolio updated with each new project, course, and work experience so that it stays current for employers.</li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p>My projects are the heart of this portfolio. Each one shows a problem I wanted to solve, the decisions I made along the way, and what came out of the work.</p>
+
+  <div class="case">
+    <h3>Game Development: Four Shipped Games</h3>
+    <p class="muted">I have shipped four games, including two original titles that I designed and built on my own.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="thumb"><img src="tanked_up.png" alt="Tanked Up gameplay"></div>
+        <h3>Tanked Up</h3>
+        <p><strong>Type:</strong> 2D tank battle puzzle game</p>
+        <p>I wrote more than 2,000 lines of code to build this game. It includes 50 unique levels, eight or more AI opponents, online leaderboards, and an infinite mode. The web release attracted more than 45 unique players, which showed me how much careful level design and balance matter.</p>
+      </div>
+      <div class="card">
+        <div class="thumb"><img src="4-years-later.jpg" alt="4 Years Later gameplay"></div>
+        <h3>4 Years Later</h3>
+        <p><strong>Type:</strong> Guitar Hero-style rhythm game</p>
+        <p>This game has more than 4,000 lines of code and features eight original songs, a badge and achievement system, and saved high scores. It reached more than 25 downloads. Building it taught me how to keep timing accurate and how to design systems that reward players for steady progress.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="case">
+    <h3>Procedural Wave Generation in Python and Blender</h3>
+    <div class="card">
+      <div class="thumb">
+        <video src="2026-02-22 15-13-55.mp4" autoplay loop muted playsinline></video>
+      </div>
+      <p style="margin-top: 14px;">I applied the Fast Fourier Transform along with Blender's ocean physics engine to generate realistic calm and turbulent water effects for a 2D isometric game. The Fast Fourier Transform lets me describe a wave surface as a set of frequencies, which makes it possible to create water that looks natural without animating every frame by hand. This project connected my interest in signal processing to visual design.</p>
+    </div>
+  </div>
+
+  <div class="case">
+    <h3>Video Auto-Captioning Software</h3>
+    <div class="card">
+      <div class="thumb" style="background: linear-gradient(135deg, #cfd8e3, #e9edf2); display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:14px; border:1px dashed #aab4c0;">[Before and after captioned video frame]</div>
+      <p style="margin-top: 14px;">I built a Python application that generates captions automatically from speech. It uses OpenAI's Whisper library to transcribe audio, converts the transcript into structured JSON, and then uses FFMPEG to render captions directly into the video. Users can customize the font, size, color, outline, and placement of the captions. This project taught me how to combine several tools into one pipeline, and how to make sure each stage's output is in the format the next stage expects.</p>
+    </div>
+  </div>
+
+  <div class="case">
+    <h3>Raspberry Pi Embedded Systems Project</h3>
+    <div class="card">
+      <div class="thumb" style="background: linear-gradient(135deg, #cfd8e3, #e9edf2); display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:14px; border:1px dashed #aab4c0;">[Photo of your Raspberry Pi setup]</div>
+      <p style="margin-top: 14px;">I installed and configured Raspberry Pi OS on a Raspberry Pi 5, set up Wi-Fi hotspot and LAN connectivity, and enabled SSH for remote access. I then wrote Python and Bash scripts to control the hardware and to debug it remotely. This project gave me hands-on experience with the Linux command line and the workflow of embedded development, from flashing an image to running code on hardware.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="timeline-item">
+    <h3>Lifeguard</h3>
+    <div class="when">Swim Atlanta and Dynamo, Atlanta and Roswell, GA | May 2022 to June 2026</div>
+    <p>I guarded swimmers and monitored water chemistry at eight pool locations. My work focused on preventing incidents through constant supervision and responding quickly when something went wrong. Each summer I worked 30 to 40 hours per week, which included opening and closing duties and helping members with questions.</p>
+  </div>
+  <div class="timeline-item">
+    <h3>Host and Dishwasher</h3>
+    <div class="when">The Marlay House, Decatur, GA | January 2025 to Present</div>
+    <p>I manage host duties, including seating guests and coordinating with servers, and I run industrial dishwashing so the kitchen and dining room keep moving. I work 15 to 20 hours per week throughout the year. This job has made me better at managing several tasks at once and keeping a clear sense of priorities during busy shifts.</p>
+  </div>
+  <div class="timeline-item">
+    <h3>Education</h3>
+    <div class="when">Georgia Institute of Technology | June 2026 to Present</div>
+    <p>Bachelor of Science in Computer Engineering. Expected graduation: May 2028. Activities: Game Development Club and Intramural Basketball.</p>
+    <div class="when" style="margin-top:12px;">Kennesaw State University | 2024 to May 2026</div>
+    <p>Bachelor of Science in Computer Engineering, 3.9 GPA. President's List (Fall 2024 and Spring 2026) and Dean's List (Spring 2025 and Fall 2025). Activities: Game Development Club, Intramural Basketball, and Social Justice Club.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Programming</h3>
+      <p>Python, Java, C#, GDScript</p>
+    </div>
+    <div class="card">
+      <h3>Technical</h3>
+      <p>Linux command line, Raspberry Pi and embedded systems, SSH and remote debugging, Wi-Fi and LAN networking, FFMPEG, JSON, Git</p>
+    </div>
+    <div class="card">
+      <h3>Interpersonal</h3>
+      <p>Communication, teamwork, performing under high-stress conditions, and steady improvement under pressure</p>
+    </div>
+  </div>
+</section>
+
+<section id="resume">
+  <h2>Resume</h2>
+  <p>A one-page version of my resume is available for download below.</p>
+  <a class="btn" href="resume.pdf" download>Download Resume (PDF)</a>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>I am always glad to talk about games, embedded systems, or internship opportunities.</p>
+  <ul class="clean">
+    <li><strong>Email:</strong> <a href="mailto:jharre38@gatech.edu">jharre38@gatech.edu</a></li>
+    <li><strong>Phone:</strong> (470) 813-1275</li>
+    <li><strong>Location:</strong> Atlanta, GA</li>
+  </ul>
+</section>
+
+<footer>
+  &copy; 2026 James Harrell IV. Built as part of the ECE ePortfolio assignment.
+</footer>
+
+</body>
+</html>
