@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>James Harrell IV | Computer Engineering ePortfolio</title>
+<style>
+  :root {
+    --navy: #1b2a41;
+    --gold: #b3a369;
+    --light: #f5f6f8;
+    --text: #222;
+    --muted: #5a6270;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--text);
+    background: #fff;
+  }
+  header.site {
+    background: var(--navy);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  header.site .bar {
+    max-width: 1000px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  header.site .name { font-weight: 700; letter-spacing: 0.5px; }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 16px;
+    font-size: 15px;
+    border-bottom: 2px solid transparent;
+  }
+  nav a:hover { border-bottom-color: var(--gold); }
+  section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 56px 20px;
+    border-bottom: 1px solid #e3e6ea;
+  }
+  section:nth-of-type(even) { background: var(--light); max-width: none; }
+  section:nth-of-type(even) > .inner { max-width: 1000px; margin: auto; }
+  h1, h2, h3 { color: var(--navy); line-height: 1.25; }
+  h2 {
+    font-size: 30px;
+    margin-top: 0;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--gold);
+    display: inline-block;
+  }
+  h3 { font-size: 20px; margin-bottom: 6px; }
+  .hero {
+    background: linear-gradient(135deg, var(--navy), #2e4a6e);
+    color: #fff;
+    padding: 80px 20px;
+  }
+  .hero .inner { max-width: 1000px; margin: auto; display: flex; flex-wrap: wrap; gap: 32px; align-items: center; }
+  .hero h1 { color: #fff; font-size: 44px; margin: 0 0 8px; }
+  .hero p { font-size: 19px; max-width: 620px; }
+  .photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: #3d5a80;
+    border: 4px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    color: #dfe6ef;
+    padding: 20px;
+    flex-shrink: 0;
+  }
+  .photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+  .tag {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 4px 4px 0 0;
+  }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 24px; }
+  .card {
+    background: #fff;
+    border: 1px solid #dde1e6;
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+  .card .thumb {
+    height: 140px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #cfd8e3, #e9edf2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 14px;
+    border: 1px dashed #aab4c0;
+  }
+  .placeholder {
+    background: #fff8e1;
+    border: 1px dashed var(--gold);
+    padding: 12px 16px;
+    border-radius: 6px;
+    color: #6b5a1e;
+    font-size: 15px;
+  }
+  ul.clean { padding-left: 20px; }
+  ul.clean li { margin-bottom: 8px; }
+  .timeline-item { border-left: 3px solid var(--gold); padding: 0 0 18px 18px; margin-left: 6px; }
+  .timeline-item .when { color: var(--muted); font-size: 14px; }
+  .case h3 { margin-top: 28px; }
+  .case h4 { margin: 18px 0 4px; color: var(--navy); font-size: 17px; }
+  .muted { color: var(--muted); }
+  a.btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+  a.btn:hover { background: #c9ba7e; }
+  footer {
+    background: var(--navy);
+    color: #cdd5df;
+    text-align: center;
+    padding: 24px 20px;
+    font-size: 14px;
+  }
+  @media (max-width: 640px) {
+    nav a { margin-left: 10px; font-size: 14px; }
+    .hero h1 { font-size: 34px; }
+    .photo { width: 170px; height: 170px; }
+    h2 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="bar">
+    <div class="name">James Harrell IV</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#goals">Goals</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="inner">
+    <div class="photo">
+      <img src="headshot.jpg" alt="James Harrell IV" onerror="this.style.display='none'">
+      <span>[Add headshot here: headshot.jpg]</span>
+    </div>
+    <div>
+      <h1>James Harrell IV</h1>
+      <p><strong>Computer Engineering student at Georgia Tech</strong></p>
+      <p>I build interactive games, embedded systems, and practical software tools. I care about making technology that people enjoy using, and I like solving problems where the hardware and the software have to work together.</p>
+      <span class="tag">Python</span><span class="tag">Java</span><span class="tag">C#</span><span class="tag">GDScript</span><span class="tag">Embedded Systems</span><span class="tag">Game Development</span>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="inner">
+    <p>I am a Computer Engineering student at the Georgia Institute of Technology, expected to graduate in May 2028. Before transferring to Georgia Tech, I completed my first two years of the Bachelor of Science in Computer Engineering at Kennesaw State University, where I earned a 3.9 GPA and made the President's List and the Dean's List. My interest in engineering started with games. I wanted to know how the things I played actually worked, so I began writing code and kept going from there.</p>
+    <p>That curiosity has grown into a broader interest in how software connects to the physical world. I have built a Raspberry Pi system from the operating system up, written scripts for hardware control, and worked with Linux, SSH, and networking configuration. I have also finished four games, which taught me how to plan a project, test it with real players, and fix problems quickly when they come up.</p>
+    <p>Outside of class and projects, I work as a lifeguard, where I am responsible for the safety of swimmers across eight pool locations. I also work as a host and dishwasher at The Marlay House. Both jobs taught me to stay calm under pressure, communicate clearly with coworkers and customers, and keep my focus on the details that matter most. I am also active in the Game Development Club and play intramural basketball.</p>
+    <p>[OPTIONAL: Add one or two sentences about what first sparked your interest in computing or a moment that changed how you think about engineering. A short, specific story is more memorable than a list of facts.]</p>
+  </div>
+</section>
+
+<section id="goals">
+  <h2>Career Goals</h2>
+  <p><strong>Short-term (Summer 2027):</strong> I am seeking a summer internship in user-interactive experiences or electronic communication systems. I want a role where I can apply what I have learned in game development and embedded systems to products that real people use.</p>
+  <p><strong>Mid-term (before graduation in 2028):</strong> Build on my coursework with projects that combine software and hardware, and gain experience working on a team with a larger codebase than I have worked with alone. I also plan to strengthen my knowledge of networking and signal processing, which connects to my wave generation and captioning projects.</p>
+  <p><strong>Long-term:</strong> Work as an engineer on interactive products, whether that means game systems, user interfaces, or communication hardware. I eventually want to lead small technical teams and take responsibility for both the design and the implementation of a product.</p>
+  <h3>How I plan to get there</h3>
+  <ul class="clean">
+    <li>Complete relevant Georgia Tech coursework in software design, embedded systems, and signal processing.</li>
+    <li>Continue the Game Development Club and use it to ship at least one more finished project before my internship search.</li>
+    <li>Apply for internships in the Fall 2026 and Spring 2027 cycles, and use the ECE Career Fair to talk with recruiters about interactive and communication systems roles.</li>
+    <li>Keep this ePortfolio updated with each new project, course, and work experience so that it stays current for employers.</li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p>My projects are the heart of this portfolio. Each one shows a problem I wanted to solve, the decisions I made along the way, and what came out of the work. The Discovery Project Feature appears first.</p>
+
+  <div class="case">
+    <h3>Discovery Project Feature: [PROJECT TITLE]</h3>
+    <div class="placeholder">
+      <strong>To complete:</strong> Choose the project you are featuring for the Discovery Project Showcase, then fill in each section below. This overview must be at least 400 words. At least one photo or video must be taken or created by you. Replace the bracketed text with your own content.
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="thumb">[Project photo or video, taken or created by you]</div>
+      <h4>The Problem</h4>
+      <p>[Describe the problem you set out to solve, who it affects, and why it matters. Explain what was missing or not working and why you chose to address it.]</p>
+      <h4>The Process</h4>
+      <p>[Walk through how you approached the work. Describe your research, the design choices you made, the tools and languages you used, the problems you ran into, and how you tested and revised the project. Consider using the design thinking stages: empathize, define, ideate, prototype, and test.]</p>
+      <h4>The Outcome</h4>
+      <p>[Describe the final result. Include measurable outcomes such as users, performance, or completion, and explain what you learned and what you would do differently next time.]</p>
+    </div>
+  </div>
+
+  <div class="case">
+    <h3>Game Development: Four Shipped Games</h3>
+    <p class="muted">I have shipped four games, including two original titles that I designed and built on my own.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="thumb">[Screenshot: Tanked Up]</div>
+        <h3>Tanked Up</h3>
+        <p><strong>Type:</strong> 2D tank battle puzzle game</p>
+        <p>I wrote more than 2,000 lines of code to build this game. It includes 50 unique levels, eight or more AI opponents, online leaderboards, and an infinite mode. The web release attracted more than 45 unique players, which showed me how much careful level design and balance matter.</p>
+      </div>
+      <div class="card">
+        <div class="thumb">[Screenshot: 4 Years Later]</div>
+        <h3>4 Years Later</h3>
+        <p><strong>Type:</strong> Guitar Hero-style rhythm game</p>
+        <p>This game has more than 4,000 lines of code and features eight original songs, a badge and achievement system, and saved high scores. It reached more than 25 downloads. Building it taught me how to keep timing accurate and how to design systems that reward players for steady progress.</p>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:14px;">[OPTIONAL: Add the names and descriptions of your other two shipped games, if you want them shown.]</p>
+  </div>
+
+  <div class="case">
+    <h3>Procedural Wave Generation in Python and Blender</h3>
+    <div class="card">
+      <div class="thumb">[Rendered wave image or short video]</div>
+      <p>I applied the Fast Fourier Transform along with Blender's ocean physics engine to generate realistic calm and turbulent water effects for a 2D isometric game. The Fast Fourier Transform lets me describe a wave surface as a set of frequencies, which makes it possible to create water that looks natural without animating every frame by hand. This project connected my interest in signal processing to visual design.</p>
+    </div>
+  </div>
+
+  <div class="case">
+    <h3>Video Auto-Captioning Software</h3>
+    <div class="card">
+      <div class="thumb">[Before and after captioned video frame]</div>
+      <p>I built a Python application that generates captions automatically from speech. It uses OpenAI's Whisper library to transcribe audio, converts the transcript into structured JSON, and then uses FFMPEG to render captions directly into the video. Users can customize the font, size, color, outline, and placement of the captions. This project taught me how to combine several tools into one pipeline, and how to make sure each stage's output is in the format the next stage expects.</p>
+    </div>
+  </div>
+
+  <div class="case">
+    <h3>Raspberry Pi Embedded Systems Project</h3>
+    <div class="card">
+      <div class="thumb">[Photo of your Raspberry Pi setup, taken by you]</div>
+      <p>I installed and configured Raspberry Pi OS on a Raspberry Pi 5, set up Wi-Fi hotspot and LAN connectivity, and enabled SSH for remote access. I then wrote Python and Bash scripts to control the hardware and to debug it remotely. This project gave me hands-on experience with the Linux command line and the workflow of embedded development, from flashing an image to running code on hardware.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="timeline-item">
+    <h3>Lifeguard</h3>
+    <div class="when">Swim Atlanta and Dynamo, Atlanta and Roswell, GA | May 2022 to June 2026</div>
+    <p>I guarded swimmers and monitored water chemistry at eight pool locations. My work focused on preventing incidents through constant supervision and responding quickly when something went wrong. Each summer I worked 30 to 40 hours per week, which included opening and closing duties and helping members with questions.</p>
+  </div>
+  <div class="timeline-item">
+    <h3>Host and Dishwasher</h3>
+    <div class="when">The Marlay House, Decatur, GA | January 2025 to Present</div>
+    <p>I manage host duties, including seating guests and coordinating with servers, and I run industrial dishwashing so the kitchen and dining room keep moving. I work 15 to 20 hours per week throughout the year. This job has made me better at managing several tasks at once and keeping a clear sense of priorities during busy shifts.</p>
+  </div>
+  <div class="timeline-item">
+    <h3>Education</h3>
+    <div class="when">Georgia Institute of Technology | June 2026 to Present</div>
+    <p>Bachelor of Science in Computer Engineering. Expected graduation: May 2028. Activities: Game Development Club and Intramural Basketball.</p>
+    <div class="when" style="margin-top:12px;">Kennesaw State University | [CONFIRM DATES: 2024 to May 2026]</div>
+    <p>Bachelor of Science in Computer Engineering, 3.9 GPA. President's List (Fall 2024 and Spring 2026) and Dean's List (Spring 2025 and Fall 2025). Activities: Game Development Club, Intramural Basketball, and Social Justice Club.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Programming</h3>
+      <p>Python, Java, C#, GDScript</p>
+    </div>
+    <div class="card">
+      <h3>Technical</h3>
+      <p>Linux command line, Raspberry Pi and embedded systems, SSH and remote debugging, Wi-Fi and LAN networking, FFMPEG, JSON, Git</p>
+    </div>
+    <div class="card">
+      <h3>Interpersonal</h3>
+      <p>Communication, teamwork, performing under high-stress conditions, and steady improvement under pressure</p>
+    </div>
+  </div>
+</section>
+
+<section id="resume">
+  <h2>Resume</h2>
+  <p>A one-page version of my resume is available for download below.</p>
+  <a class="btn" href="resume.pdf" download>Download Resume (PDF)</a>
+  <p class="muted" style="margin-top:12px;">[Upload your resume as resume.pdf to the same folder as this site.]</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>I am always glad to talk about games, embedded systems, or internship opportunities.</p>
+  <ul class="clean">
+    <li><strong>Email:</strong> <a href="mailto:jharre38@gatech.edu">jharre38@gatech.edu</a></li>
+    <li><strong>Phone:</strong> (470) 813-1275</li>
+    <li><strong>Location:</strong> Atlanta, GA</li>
+    <li><strong>LinkedIn:</strong> [Add your LinkedIn URL]</li>
+    <li><strong>GitHub:</strong> [Add your GitHub URL]</li>
+  </ul>
+</section>
+
+<footer>
+  &copy; 2026 James Harrell IV. Built as part of the ECE ePortfolio assignment.
+</footer>
+
+</body>
+</html>
